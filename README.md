@@ -14,5 +14,5 @@ or
 
 Search for `language-ncl` using the Atom package manager.
 
-Open a new file in Atom with the suffix `.ncl`, and you are good to go!
+Then, open a new file in Atom with the suffix `.ncl`, and you are good to go!
 
