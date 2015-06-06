@@ -1,0 +1,108 @@
+".source.ncl":
+  "Begin NCL script block":
+    prefix: "beg"
+    body: '''
+      
+      begin
+      
+      	${1:; begin your script}
+      
+      end
+      
+    '''
+  "NCL do loop":
+    prefix: "do"
+    body: '''
+      
+      do ${1:i} = ${2:0}, ${3:n}
+      	${4:; write loop content}
+      end do
+      
+    '''
+  "NCL if condition":
+    prefix: "if"
+    body: '''
+      
+      if (${1:conditions}) then
+      	${2:; write branch}
+      end if
+      
+    '''
+  "NCL if-else condition":
+    prefix: "ifelse"
+    body: '''
+      
+      if (${1:conditions}) then
+      	${2:; write branch}
+      else
+      	${3:; write else branch}
+      end if
+      
+    '''
+  "Load NCL library scripts":
+    prefix: "load"
+    body: '''
+      
+      load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_code.ncl"
+      load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/gsn_csm.ncl"
+      load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
+      
+    '''
+  "NCL resources xy ranges":
+    prefix: "res_axis_ranges"
+    body: '''
+      
+      ${1:res}@trXMinF = ${2:0}
+      ${1}@trXMaxF = ${3:1}
+      ${1}@trYMinF = ${4:0}
+      ${1}@trYMaxF = ${5:1}
+      ${1}@tmXBTickStartF = ${2}
+      ${1}@tmXBTickEndF = ${3}
+      ${1}@tmYLTickStartF = ${4}
+      ${1}@tmYLTickEndF = ${5}
+      
+    '''
+  "NCL resource to reverse axis":
+    prefix: "res_axis_reverse"
+    body: '''
+      
+      ${1:res}@tr${2:X or Y}Reverse = True
+      
+    '''
+  "NCL resources explicit contour levels":
+    prefix: "res_contour_explicit_levels"
+    body: '''
+      
+      ${1:res}@cnLevelSelectionMode = "ExplicitLevels"
+      ${1}@cnLevels = (/${2:...}/)
+      
+    '''
+  "NCL resources manual contour levels":
+    prefix: "res_contour_manual_levels"
+    body: '''
+      
+      ${1:res}@cnLevelSelectionMode = "ManualLevels"
+      ${1}@cnMinLevelValF = ${2:min_level}
+      ${1}@cnMaxLevelValF = ${3:max_level}
+      ${1}@cnLevelSpacingF = ${4:level_spacing}
+      
+    '''
+  "NCL resources xy grid lines":
+    prefix: "res_xy_grid_lines"
+    body: '''
+      
+      ${1:res}@tmXMajorGrid = ${2:True}
+      ${1}@tmYMajorGrid = ${3:True}
+      ${1}@tmXMajorGridThicknessF = ${4:1.0}
+      ${1}@tmYMajorGridThicknessF = ${5:1.0}
+      ${1}@tmXMajorGridLineDashPattern = ${6:2}
+      ${1}@tmYMajorGridLineDashPattern = ${6}
+      
+    '''
+  "NCL resource to draw XY in log scale":
+    prefix: "res_xy_log_scale"
+    body: '''
+      
+      ${1:res}@xy${2:X or Y}Style = "Log"
+      
+    '''

@@ -1,0 +1,5 @@
+".source.ncl":
+  editor:
+    increaseIndentPattern: "^\\s*(do|if|else)"
+    decreaseIndentPattern: "^\\s*(end *(do|if)|else)"
+    commentStart: "; "
