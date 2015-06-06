@@ -2,7 +2,7 @@
   "name": "language-ncl",
   "main": "./lib/language-ncl",
   "version": "0.2.0",
-  "description": "A short description of your package",
+  "description": "NCL language support for Atom",
   "keywords": [],
   "activationCommands": {
     "atom-workspace": "language-ncl:toggle"
