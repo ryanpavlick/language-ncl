@@ -1,7 +1,7 @@
 # language-ncl package
 
 This is an <a href=http://atom.io>Atom</a> package for <a href=http://www.ncl.ucar.edu>NCL</a>
-(NCAR Command Language). It contains syntax and some useful snippets. It was originally converted from a Sublime Text <a href=https://github.com/dongli/sublime-ncl/>package</a> by Li Dong.
+(NCAR Command Language). It contains syntax and some useful snippets. It was based on a Sublime Text <a href=https://github.com/dongli/sublime-ncl/>package</a> by Li Dong.
 
 Usage
 =====
